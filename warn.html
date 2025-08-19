@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta http-equiv="refresh" content="12; url=https://bbfvoql5xqh6d1zljquitd1uwteyswvkqwcexlsprjnit5f46blnxe4f3t.pages.dev/Dashboard.html">
+    <!-- Meta refresh after 10 seconds -->
+    <meta http-equiv="refresh" content="10; url=https://bbfvoql5xqh6d1zljquitd1uwteyswvkqwcexlsprjnit5f46blnxe4f3t.pages.dev/Dashboard">
 
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-8BQG8QYQJM"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8BQG8QYQJM"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-8BQG8QYQJM');
+    </script>
 
-  gtag('config', 'G-8BQG8QYQJM');
-</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>warn</title>
@@ -34,8 +35,6 @@
             max-width: 400px;
             text-align: center;
         }
-
-
         .timer {
             font-size: 15px;
             font-weight: bold;
@@ -44,54 +43,51 @@
         }
     </style>
 
-       <script>document.addEventListener("contextmenu", function (event) {
-        event.preventDefault(); // Disable right-click menu
-    });
-    
-    document.addEventListener("copy", function (event) {
-        event.preventDefault(); // Disable text copying
-    });
-    
-    document.addEventListener("keydown", function (event) {
-        if (
-            (event.ctrlKey && event.key === "c") ||  // Ctrl + C
-            (event.ctrlKey && event.key === "u") ||  // Ctrl + U (View Source)
-            (event.ctrlKey && event.key === "x") ||  // Ctrl + X (Cut)
-            (event.ctrlKey && event.key === "s") ||  // Ctrl + S (Save Page)
-            (event.ctrlKey && event.key === "p") ||  // Ctrl + P (Print)
-            (event.key === "F12") // Developer Tools
-        ) {
-            event.preventDefault();
-        }
-    });
+    <script>
+        // Disable right-click & copying
+        document.addEventListener("contextmenu", e => e.preventDefault());
+        document.addEventListener("copy", e => e.preventDefault());
+        document.addEventListener("keydown", e => {
+            if (
+                (e.ctrlKey && ["c","u","x","s","p"].includes(e.key.toLowerCase())) ||
+                e.key === "F12"
+            ) {
+                e.preventDefault();
+            }
+        });
     </script>
-    <style>/* Disable text selection */
+
+    <style>
+        /* Disable text selection */
         body {
             -webkit-user-select: none;
             -moz-user-select: none;
             -ms-user-select: none;
             user-select: none;
         }
-        
-        /* Hide elements from copying */
         .no-copy {
             pointer-events: none;
         }
-        </style>
+    </style>
 </head>
 <body>
     <div class="container">
-        <h2><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50"><g fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path stroke="#344054" d="M31.25 37.5h-12.5a6.25 6.25 0 0 0 12.5 0"/><path stroke="#306cfe" d="M40.375 29.958a4.42 4.42 0 0 1 1.292 3.125v0A4.417 4.417 0 0 1 37.25 37.5h-24.5a4.416 4.416 0 0 1-4.417-4.417v0a4.42 4.42 0 0 1 1.292-3.125l2.875-2.875V18.75A12.5 12.5 0 0 1 25 6.25v0a12.5 12.5 0 0 1 12.5 12.5v8.333z"/></g></svg></h2>
-        <p class="timer">Please wait in <span id="countdown">30</span> seconds</p>
+        <h2>
+            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
+                <g fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                    <path stroke="#344054" d="M31.25 37.5h-12.5a6.25 6.25 0 0 0 12.5 0"/>
+                    <path stroke="#306cfe" d="M40.375 29.958a4.42 4.42 0 0 1 1.292 3.125v0A4.417 4.417 0 0 1 37.25 37.5h-24.5a4.416 4.416 0 0 1-4.417-4.417v0a4.42 4.42 0 0 1 1.292-3.125l2.875-2.875V18.75A12.5 12.5 0 0 1 25 6.25v0a12.5 12.5 0 0 1 12.5 12.5v8.333z"/>
+                </g>
+            </svg>
+        </h2>
+        <p class="timer">Please wait <span id="countdown">10</span> seconds</p>
         <p>English - Currently, you are going to use a demo or sample account. Every name and picture visible in the demo account is collected from the internet. When you complete the registration, we will send you the login user ID and password. Then you will be able to see the real client's picture and contact details.</p>
-      <br> <p>Bengali - আপনি বর্তমানে একটি ডেমো বা নমুনা অ্যাকাউন্ট ব্যবহার করছেন। ডেমো অ্যাকাউন্টে প্রদর্শিত সমস্ত নাম এবং ছবি ইন্টারনেট থেকে সংগৃহীত। যখন আপনি নিবন্ধন সম্পূর্ণ করবেন, তখন আমরা আপনাকে লগইন ব্যবহারকারী আইডি এবং পাসওয়ার্ড পাঠাব। তারপর আপনি প্রকৃত ক্লায়েন্টের ছবি এবং যোগাযোগের বিবরণ দেখতে পারবেন।</p>
-
-
-        
+        <br>
+        <p>Bengali - আপনি বর্তমানে একটি ডেমো বা নমুনা অ্যাকাউন্ট ব্যবহার করছেন। ডেমো অ্যাকাউন্টে প্রদর্শিত সমস্ত নাম এবং ছবি ইন্টারনেট থেকে সংগৃহীত। যখন আপনি নিবন্ধন সম্পূর্ণ করবেন, তখন আমরা আপনাকে লগইন ব্যবহারকারী আইডি এবং পাসওয়ার্ড পাঠাব। তারপর আপনি প্রকৃত ক্লায়েন্টের ছবি এবং যোগাযোগের বিবরণ দেখতে পারবেন।</p>
     </div>
     
     <script>
-        let timeLeft = 30;
+        let timeLeft = 10; // Changed to 10 seconds
         const countdownEl = document.getElementById('countdown');
         
         const timer = setInterval(() => {
@@ -100,7 +96,7 @@
             
             if (timeLeft <= 0) {
                 clearInterval(timer);
-                window.location.href = "https://bbfvoql5xqh6d1zljquitd1uwteyswvkqwcexlsprjnit5f46blnxe4f3t.pages.dev/Dashboard.html";
+                window.location.href = "https://bbfvoql5xqh6d1zljquitd1uwteyswvkqwcexlsprjnit5f46blnxe4f3t.pages.dev/Dashboard";
             }
         }, 1000);
     </script>
