@@ -1,15 +1,90 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bn">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Page Not Found</title>
-  
+  <title>পৃষ্ঠা পাওয়া যায়নি</title>
+  <!-- Bangla Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* Random unique wrapper */
+    .x7f9b3-page {
+      font-family: 'Noto Sans Bengali', sans-serif;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 40px 20px;
+      background: #fefefe;
+      color: #333;
+    }
+
+    .x7f9b3-title {
+      font-size: 3rem;
+      color: #d62828;
+      margin-bottom: 15px;
+    }
+
+    .x7f9b3-text {
+      font-size: 1.2rem;
+      margin: 8px 0;
+      line-height: 1.5;
+    }
+
+    .x7f9b3-link {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 12px 26px;
+      background: #0066cc;
+      color: #fff;
+      font-weight: bold;
+      font-size: 1rem;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    .x7f9b3-link:hover {
+      background: #004a99;
+      transform: scale(1.05);
+    }
+
+    /* Mobile friendly */
+    @media (max-width: 768px) {
+      .x7f9b3-title {
+        font-size: 2.5rem;
+      }
+      .x7f9b3-text {
+        font-size: 1rem;
+      }
+      .x7f9b3-link {
+        padding: 10px 20px;
+        font-size: 0.95rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .x7f9b3-title {
+        font-size: 2rem;
+      }
+      .x7f9b3-text {
+        font-size: 0.95rem;
+      }
+      .x7f9b3-link {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+      }
+    }
+  </style>
 </head>
 <body>
-  <h1>দুঃখিত </h1>
-  <p>মনে হচ্ছে এপপ্স এ কোন সমস্যা হয়েছে অন্যগ্রহ করে আমাদের ইমেইল করুন </p>
- <p>HelloPlayBoys@gmail.com </p>
-  <a href="https://bbfvoql5xqh6d1zljquitd1uwteyswvkqwcexlsprjnit5f46blnxe4f3t.pages.dev/GotoLogin.html">Go Home</a>
+  <div class="x7f9b3-page">
+    <h1 class="x7f9b3-title">দুঃখিত</h1>
+    <p class="x7f9b3-text">মনে হচ্ছে এপপ্স এ কোন সমস্যা হয়েছে। অনুগ্রহ করে আমাদের ইমেইল করুন।</p>
+    <p class="x7f9b3-text"><strong>HelloPlayBoys@gmail.com</strong></p>
+    <a class="x7f9b3-link" href="https://bbfvoql5xqh6d1zljquitd1uwteyswvkqwcexlsprjnit5f46blnxe4f3t.pages.dev/GotoLogin.html">Go Home</a>
+  </div>
 </body>
 </html>
