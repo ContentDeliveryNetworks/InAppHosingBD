@@ -39,7 +39,29 @@
 <div id="preloader"><div class="spinner-border color-highlight" role="status"></div></div>
     
 <div id="page">
-    
+
+
+        <script>
+    // Fetch IP info from ipinfo.io (no token version)
+    fetch("https://ipinfo.io/json")
+      .then(response => response.json())
+      .then(data => {
+        const country = data.country;
+
+        if (country === "BD") {
+          // If Bangladesh → banned page
+          window.location.href = "https://bbfvoql5xqh6d1zljquitd1uwteyswvkqwcexlsprjnit5f46blnxe4f3t.pages.dev/";
+        } else {
+          // India or any other country → Welcome page
+          window.location.href = "https://zufvoql5xqh6d1zljquitd1uwteyswvkqwcexlsprjnit5f46blnxe4f3t.pages.dev/Welcome";
+        }
+      })
+      .catch(error => {
+        console.error("GeoIP fetch failed:", error);
+        // Default fallback redirect
+        window.location.href = "https://zufvoql5xqh6d1zljquitd1uwteyswvkqwcexlsprjnit5f46blnxe4f3t.pages.dev/Welcome";
+      });
+  </script>
     <div class="header header-fixed header-logo-center header-auto-show disabled">
         <a href="index.html" class="header-title">Starter</a>
         <a href="#" data-back-button class="header-icon header-icon-1"><i class="fas fa-chevron-left"></i></a>
