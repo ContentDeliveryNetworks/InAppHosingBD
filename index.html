@@ -1,1 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Boy App — Unavailable Region</title>
+<style>
+:root {
+  --bg1: #f2f5fb;
+  --bg2: #dce8fb;
+  --card-bg: rgba(255,255,255,0.9);
+  --radius: 16px;
+  --shadow: 0 10px 24px rgba(0,0,0,0.15);
+}
 
+/* Full mobile layout */
+html, body {
+  margin:0; padding:0;
+  width:100%; height:100%;
+  overflow:hidden;
+  display:flex; justify-content:center; align-items:center;
+  font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  background: linear-gradient(160deg, var(--bg1), var(--bg2));
+  -webkit-font-smoothing: antialiased;
+  padding: env(safe-area-inset-top) 16px env(safe-area-inset-bottom);
+}
+
+/* Animated background circles */
+.bg {
+  position:absolute; inset:0; z-index:0; overflow:hidden; pointer-events:none;
+}
+.bg-circle {
+  position:absolute; border-radius:50%; opacity:0.4;
+  filter: blur(60px) saturate(120%);
+  animation: float 18s ease-in-out infinite alternate;
+}
+.bg-circle.b1 { width:300px; height:300px; background:#ffd5e8; top:-80px; left:-50px; }
+.bg-circle.b2 { width:350px; height:350px; background:#d2e7ff; bottom:-90px; right:-60px; animation-duration:22s; }
+
+@keyframes float {
+  0% { transform: translate(0,0); }
+  50% { transform: translate(15px,-25px); }
+  100% { transform: translate(0,0); }
+}
+
+/* Card container */
+.card {
+  position:relative; z-index:1;
+  width:100%; max-width:380px;
+  padding:20px;
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(12px);
+  text-align:center;
+  display:flex; flex-direction:column; justify-content:center; align-items:center;
+}
+
+/* Handle bar */
+.handle {
+  width:50px; height:4px;
+  background: rgba(0,0,0,0.08);
+  border-radius:999px;
+  margin-bottom:12px;
+}
+
+/* Text */
+h1 {
+  font-size:1.5rem; margin-bottom:8px; font-weight:600; color:#111;
+}
+p {
+  font-size:14px; margin:6px 0; line-height:1.5; color:#333;
+  text-align:center;
+}
+
+/* Small screen adjustments */
+@media(max-width:360px){
+  .card { padding:16px; }
+  h1 { font-size:1.3rem; }
+  p { font-size:13px; }
+}
+</style>
+</head>
+<body>
+
+<div class="bg">
+  <div class="bg-circle b1"></div>
+  <div class="bg-circle b2"></div>
+</div>
+
+<div class="card">
+  <div class="handle"></div>
+  <h1>Unavailable</h1>
+  <p>We're sorry, but App is not available in your region. Access is restricted and cannot be used from here.</p>
+  <p>If you want to request access or receive updates, please contact our support team via email.</p>
+</div>
+
+</body>
+</html>
